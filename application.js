@@ -59,7 +59,7 @@ class AppHiragana {
            this.buttonSoluceOn = false;
         }
 
-        this.butttonSoluceClicked = false;
+        this.buttonSoluceClicked = false;
         
     }
 
@@ -157,6 +157,7 @@ class AppHiragana {
     }
 
     soluce(){
+        console.log("hum");
         this.buttonSoluceClicked = true;
         if (this.areYouReverse == 1){
             this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][3];
@@ -167,3 +168,5 @@ class AppHiragana {
 }
 
 var AppHira = new AppHiragana();
+
+//Risque que l'indice ne reset pas quand on reverse
