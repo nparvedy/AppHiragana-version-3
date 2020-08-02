@@ -20,17 +20,22 @@ class AppHiragana {
     change = 1;
     valeur = 0;
     valeur2 = 0;
+    buttonSoluceOn = false;
+    buttonSoluceClicked = false;
 
     clavierVirtuel = document.getElementById("clavierVirtuel2");
 
     theIndice = document.getElementById("indice2");
 
+    right = document.getElementById("right2");
+
     checkWord(){
 
         //vérifie si la réponse est correcte
-        
-        if (hiraganaVerso[this.valeur][this.change] == wordToGuess2.value)
-        {
+
+        if(hiraganaVerso[this.valeur][this.change] == wordToGuess2.value && this.buttonSoluceClicked == true){
+            this.answer.innerText = "Bonne réponse, la traduction de : " +  hiraganaVerso[this.valeur][this.valeur2] + " était bien " + hiraganaVerso[this.valeur][this.change] + ". Sauf que tu as vu la solution donc tu ne gagnes aucun point.";
+        }else if (hiraganaVerso[this.valeur][this.change] == wordToGuess2.value){
             this.answer.innerText = "Bonne réponse, la traduction de : " +  hiraganaVerso[this.valeur][this.valeur2] + " était bien " + hiraganaVerso[this.valeur][this.change];
             this.goodAnswer.innerText = parseInt(this.goodAnswer.innerText) + 1;
         }else {
@@ -43,6 +48,18 @@ class AppHiragana {
         
         wordToGuess2.value = "";
         this.theIndice.innerText = ""; //[3]
+
+        var nbButtonsRight = document.querySelectorAll("#right2 button");
+
+        //supprimer du bouton soluce
+
+        if(nbButtonsRight.length == 2)
+        {
+           this.right.removeChild(nbButtonsRight[1]);
+           this.buttonSoluceOn = false;
+        }
+
+        this.butttonSoluceClicked = false;
         
     }
 
@@ -121,7 +138,31 @@ class AppHiragana {
         }else {
             this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][0];
         }
+
+        if(this.buttonSoluceOn == false)
+        {
+            this.createButtonSoluce();
+        }
         
+        
+    }
+
+    createButtonSoluce(){
+        var btn = document.createElement("BUTTON");
+        btn.innerText = "Solution";
+        btn.setAttribute("onclick", "AppHira.soluce()");
+        btn.setAttribute("id", "soluce");
+        this.right.appendChild(btn);
+        this.buttonSoluceOn = true;
+    }
+
+    soluce(){
+        this.buttonSoluceClicked = true;
+        if (this.areYouReverse == 1){
+            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][3];
+        }else {
+            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][1];
+        }
     }
 }
 

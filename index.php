@@ -31,8 +31,6 @@
         </div>
     </section>
 
-    
-    
     <script src="data.js"></script>
     <script src="application.js"></script>
 </body>
