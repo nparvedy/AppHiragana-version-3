@@ -48,18 +48,10 @@ class AppHiragana {
         
         wordToGuess2.value = "";
         this.theIndice.innerText = ""; //[3]
-
-        var nbButtonsRight = document.querySelectorAll("#right2 button");
-
-        //supprimer du bouton soluce
-
-        if(nbButtonsRight.length == 2)
-        {
-           this.right.removeChild(nbButtonsRight[1]);
-           this.buttonSoluceOn = false;
-        }
-
-        this.buttonSoluceClicked = false;
+        
+        
+        
+        this.deleteSoluceButton();
         
     }
 
@@ -82,6 +74,7 @@ class AppHiragana {
         this.theIndice.innerText = ""; // Se répète avec [3]
 
         this.clavierVirtuelFunction();
+        this.deleteSoluceButton();
     }
 
     clavierVirtuelFunction(){
@@ -164,6 +157,19 @@ class AppHiragana {
         }else {
             this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][1];
         }
+    }
+
+    deleteSoluceButton(){
+        var nbButtonsRight = document.querySelectorAll("#right2 button");
+
+        //suppression du bouton soluce
+
+        if(nbButtonsRight.length == 2)
+        {
+           this.right.removeChild(nbButtonsRight[1]);
+           this.buttonSoluceOn = false;
+        }
+        this.buttonSoluceClicked = false;
     }
 }
 
