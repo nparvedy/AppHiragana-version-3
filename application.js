@@ -17,7 +17,7 @@ class AppHiragana {
     goodAnswer = document.getElementById("goodAnswer2");
     wrongAnswer = document.getElementById("wrongAnswer2");
     areYouReverse = 0;
-    change = 0;
+    change = 1;
     valeur = 0;
     valeur2 = 0;
 
@@ -26,15 +26,6 @@ class AppHiragana {
     theIndice = document.getElementById("indice2");
 
     checkWord(){
-        //vérifie l'ordre de traduction
-        if (this.areYouReverse == 1)
-        {
-            this.valeur2 = 1;
-            this.change = 0;
-        }else {
-            this.valeur2 = 0;
-            this.change = 1;
-        }
 
         //vérifie si la réponse est correcte
         
@@ -47,10 +38,11 @@ class AppHiragana {
             this.wrongAnswer.innerText = parseInt(this.wrongAnswer.innerText) + 1;
         }
 
-        this.valeur = Math.floor(Math.random() * Math.floor(45));
-        this.wordToTranslate.innerText = hiraganaVerso[this.valeur][this.valeur2];
+        this.valeur = Math.floor(Math.random() * Math.floor(45)); //[1]
+        this.wordToTranslate.innerText = hiraganaVerso[this.valeur][this.valeur2]; //[2]
         
         wordToGuess2.value = "";
+        this.theIndice.innerText = ""; //[3]
         
     }
 
@@ -59,10 +51,18 @@ class AppHiragana {
         {
             this.areYouReverse = 1;
             this.wordToTranslate.innerText = hiraganaVerso[this.valeur][1];
+            this.valeur2 = 1;
+            this.change = 0;
         }else {
             this.areYouReverse = 0;
             this.wordToTranslate.innerText = hiraganaVerso[this.valeur][0];
+            this.valeur2 = 0;
+            this.change = 1;
         }
+
+        this.valeur = Math.floor(Math.random() * Math.floor(45)); // Se répète avec [1]
+        this.wordToTranslate.innerText = hiraganaVerso[this.valeur][this.valeur2]; // Se répète avec [2]
+        this.theIndice.innerText = ""; // Se répète avec [3]
 
         this.clavierVirtuelFunction();
     }
@@ -116,7 +116,12 @@ class AppHiragana {
     }
 
     indiceByWord(){
-        this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][0];
+        if (this.areYouReverse == 1){
+            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][2];
+        }else {
+            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][0];
+        }
+        
     }
 }
 
