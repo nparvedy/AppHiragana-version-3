@@ -34,13 +34,49 @@ class AppHiragana {
         //vérifie si la réponse est correcte
 
         if(hiraganaVerso[this.valeur][this.change] == wordToGuess2.value && this.buttonSoluceClicked == true){
-            this.answer.innerText = "Bonne réponse, la traduction de : " +  hiraganaVerso[this.valeur][this.valeur2] + " était bien " + hiraganaVerso[this.valeur][this.change] + ". Sauf que tu as vu la solution donc tu ne gagnes aucun point.";
+            this.answer.innerHTML = "Bonne réponse, la traduction de : " 
+            +  hiraganaVerso[this.valeur][this.valeur2] 
+            + " était bien " 
+            + "["+ hiraganaVerso[this.valeur][this.change] + "].<br>" 
+            + " Sauf que tu as vu la solution donc tu ne gagnes aucun point."
+            + "<p>Exemple : " 
+            + " [" 
+            + hiraganaVerso[this.valeur][4][0][3] 
+            + "]" 
+            + " "
+            + hiraganaVerso[this.valeur][4][0][1] 
+            + " qui veut dire " 
+            + " [" + hiraganaVerso[this.valeur][4][0][4] + "]</p>";
+            
         }else if (hiraganaVerso[this.valeur][this.change] == wordToGuess2.value){
-            this.answer.innerText = "Bonne réponse, la traduction de : " +  hiraganaVerso[this.valeur][this.valeur2] + " était bien " + hiraganaVerso[this.valeur][this.change];
-            this.goodAnswer.innerText = parseInt(this.goodAnswer.innerText) + 1;
+            this.answer.innerHTML = "Bonne réponse, la traduction de : " 
+            +  hiraganaVerso[this.valeur][this.valeur2] 
+            + " était bien " 
+            + "["+ hiraganaVerso[this.valeur][this.change] + "]." 
+            + "<p>Exemple : " 
+            + " [" 
+            + hiraganaVerso[this.valeur][4][0][3] 
+            + "]" 
+            + " "
+            + hiraganaVerso[this.valeur][4][0][1] 
+            + " qui veut dire " 
+            + " [" + hiraganaVerso[this.valeur][4][0][4] + "]</p>";
+
+            this.goodAnswer.innerHTML = parseInt(this.goodAnswer.innerHTML) + 1;
         }else {
-            this.answer.innerText = "Faux ! La bonne réponse de : " + hiraganaVerso[this.valeur][this.valeur2] + " était " + hiraganaVerso[this.valeur][this.change];
-            this.wrongAnswer.innerText = parseInt(this.wrongAnswer.innerText) + 1;
+            this.answer.innerHTML = "Faux ! La bonne réponse de : " 
+            + hiraganaVerso[this.valeur][this.valeur2] + " était " 
+            + "["+ hiraganaVerso[this.valeur][this.change] + "]." 
+            + "<p>Exemple : " 
+            + " [" 
+            + hiraganaVerso[this.valeur][4][0][3] 
+            + "]" 
+            + " "
+            + hiraganaVerso[this.valeur][4][0][1] 
+            + " qui veut dire " 
+            + " [" + hiraganaVerso[this.valeur][4][0][4] + "]</p>";
+
+            this.wrongAnswer.innerHTML = parseInt(this.wrongAnswer.innerHTML) + 1;
         }
 
         this.valeur = Math.floor(Math.random() * Math.floor(45)); //[1]
@@ -48,8 +84,6 @@ class AppHiragana {
         
         wordToGuess2.value = "";
         this.theIndice.innerText = ""; //[3]
-        
-        
         
         this.deleteSoluceButton();
         
@@ -150,12 +184,11 @@ class AppHiragana {
     }
 
     soluce(){
-        console.log("hum");
         this.buttonSoluceClicked = true;
         if (this.areYouReverse == 1){
-            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][3];
+            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][3] + " [" + hiraganaVerso[this.valeur][4][0][4] + "]";
         }else {
-            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][1];
+            this.theIndice.innerText = hiraganaVerso[this.valeur][4][0][1] + " [" + hiraganaVerso[this.valeur][4][0][4] + "]";
         }
     }
 
@@ -176,3 +209,8 @@ class AppHiragana {
 var AppHira = new AppHiragana();
 
 //Risque que l'indice ne reset pas quand on reverse
+// finir le tableau de data.js
+//définir un indice aléatoire
+//propose les 5 premiers hiragana et doit atteindre minimum 3 juste pour passer à l'hiragana suivant
+// faire en sorte que chaque lettre en hiragana il y a sa traduction latin en dessous
+//Chaque lettre hiragana doit répresenter un chiffre, ce qui évite de tout traduire à chaque fois dans le data.js . Exemple : あ = 1 = a 

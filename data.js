@@ -1,13 +1,14 @@
 //Alphabet Hiragana en tableau multidimensionel
 
-var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier, 3 = ordre de la touche du clavier, 4 = indice
+var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier, 3 = ordre de la touche du clavier, 4 = indice [Nb = indice au hasard][0 = indice FR sans la lettre, 1 = indice FR solution, 2 = indice JA sans la lettre, 3 = indice JA solution, 4 = tranduction FR]
+
     ["あ","a",51, 2,[
-            ["-rigato","arigato","-りがと", "ありがと"],
+            ["- ri ga to","a ri ga to","-りがと", "ありがと", "Merci"],
             ["-rigato","arigato","-りがと", "ありがと"]
         ]
     ], 
     ["い","i",69, 14,[
-            ["ha-","hai","はい", "は-"]
+            ["ha-","hai","はい", "は-", "Oui"]
         ]
     ],  
     ["お","o",54, 5,[
@@ -23,7 +24,7 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ], 
     ["か","ka",84, 16,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-ngearu","kangaeru","-んがえる", "かんがえる", "Penser"]
         ]
     ],  
     ["き","ki",71, 27,[
@@ -47,7 +48,7 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ],  
     ["し","shi",68, 25,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-ngō","shingō","-んごう", "しんごう", "Le feu de circulation"]
         ]
     ],  
     ["そ","so",67, 38,[
@@ -63,7 +64,7 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ], 
     ["た","ta",65, 12,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-beru","taberu","-べる", "たべる", "Manger"]
         ]
     ],  
     ["ち","chi",81, 23,[
