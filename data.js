@@ -8,11 +8,11 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ], 
     ["い","i",69, 14,[
-            ["ha-","hai","はい", "は-", "Oui"]
+            ["ha-","hai","は-", "はい", "Oui"]
         ]
     ],  
     ["お","o",54, 5,[
-            ["-rigato","arigato","-りがと", "ありがと"]
+            ["-hayō gozaimasu","ohayō gozaimasu","-はようございます", "おはようございます", "Bonjour"]
         ]
     ],  
     ["う","u",52, 3,[
@@ -20,7 +20,7 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ],  
     ["え","e",53, 4,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["ii-","iie","いい-", "いいえ", "Non"]
         ]
     ], 
     ["か","ka",84, 16,[
@@ -28,23 +28,23 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ],  
     ["き","ki",71, 27,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["O gen- desu ka","O genki desu ka","おげん-ですか", "おげんきですか", "Comment allez-vous ?"]
         ]
     ],  
     ["こ","ko",66, 40,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-nnichi wa","konnichi wa","-んにちは", "こんにちは", "Bonne après-midi"]
         ]
     ],  
     ["く","ku",72, 28,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["i-ra desu ka","ikura desu ka","い-ら ですか", "いくら ですか", "C'est combien"]
         ]
     ],  
     ["け","ke",192, 33,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["iie, -kko desu.","Iie, kekko desu.","いいえ -つこうです", "いいえ けつこうです", "Non merci"]
         ]
     ], 
     ["さ","sa",88, 37,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-yonara","sayonara","-ようなら", "さようなら", "Au revoir"]
         ]
     ],  
     ["し","shi",68, 25,[
@@ -52,15 +52,15 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ],  
     ["そ","so",67, 38,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["gochi- sama deshita","gochiso sama deshita","ごち-さまでした", "ごちそさまでした", "C’était délicieux !"]
         ]
     ],  
     ["す","su",82,15,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-mimasen","sumimasen","-みません", "すみません", "Pardon"]
         ]
     ],  
     ["せ","se",80, 21,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["wakarima-n","wakarimasen","わかりま-ん", "わかりません", "Je ne comprend pas"]
         ]
     ], 
     ["た","ta",65, 12,[
@@ -68,31 +68,31 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ],  
     ["ち","chi",81, 23,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-kai desu ka","chikai desu ka","-かいですか", "ちかいですか", "Est-ce près ?"]
         ]
     ],  
     ["と","to",83, 24,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["ariga- gozaimasu","arigato gozaimasu","ありが-うございます", "ありがとうございます", "Merci beaucoup"]
         ]
     ],  
     ["つ","tsu",87, 36,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["i-","itsu","い-", "いつ", "Quand"]
         ]
     ],  
     ["て","te",90, 13,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["ji-nsha","jitensha","じ-んしゃ", "じてんしゃ", "Vélo"]
         ]
     ], 
     ["な","na",85, 18,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["mi-mi","minami","み-み", "みなみ", "Sud"]
         ]
     ],  
     ["に","ni",73, 19,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["- ikitai","ni ikitai","-いきたい", "にいきたい", "Je voudrais aller…"]
         ]
     ],  
     ["の","no",75, 30,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["ki-o","kinoo","き-う", "きのう", "Hier"]
         ]
     ],  
     ["ぬ","nu",49, 0,[
@@ -100,91 +100,91 @@ var hiraganaVerso = [ // 0 = hiragana, 1 = alphabet latin, 2 = touche du clavier
         ]
     ],  
     ["ね","ne",190, 43,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["oka-","okane","おか-", "おかね","Argent"]
         ]
     ], 
     ["は","ha",70, 26,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["konban -","konban ha","こんばん-", "こんばんは", "Bonsoir"]
         ]
     ],  
     ["ひ","hi",86, 39,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-kooki","hikooki","-こうき", "ひこうき", "Avion"]
         ]
     ],  
     ["ほ","ho",219, 10,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-n","hon","-ん", "ほん", "Le livre"]
         ]
     ],  
     ["ふ","fu",50,1,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-ne","fune","-ね", "ふね"]
         ]
     ],  
     ["へ","he",187, 11,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-ya","heya","-や", "へや", "La chambre"]
         ]
     ], 
     ["ま","ma",74, 29,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["sumi-sen","sumimasen","すみ-せん", "すみません", "Excusez-moi"]
         ]
     ],  
     ["み","mi",78, 41,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-te iru dake desu","mite iru dake desu","-て いる だけ です", "みて いる だけ です", "Je ne fais que regarder"]
         ]
     ],  
     ["も","mo",188, 42,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-tte iru","motte iru","-っている", "もっている", "Avoir"]
         ]
     ],  
     ["む","mu",220, 34,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-sume","musume","-すめ", "むすめ", "La fille"]
         ]
     ],  
     ["め","me",223,45,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["go-n nasai","gomen nasai","ご-ん なさい", "ごめん なさい"]
         ]
     ], 
     ["や","ya",55, 6,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-sui desu","yasui desu","-すい です", "やすい です", "C'est très bon marché"]
         ]
     ],   
     ["よ","yo",57, 8,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-okoso","yookoso","-うこそ", "ようこそ", "Bienvenue"]
         ]
     ],  
     ["ゆ","yu",56, 7,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-ka","yuka","-か", "ゆか", "Le sol"]
         ]
     ], 
     ["ら","ra",79, 20,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["ka-kunai","karakunai","か-くない", "からくない", "Sans épice ! "]
         ]
     ],  
     ["り","ri",76, 31,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["waka-mashita","wakarimashita","わか-ました", "わかりました", "Je comprend"]
         ]
     ],  
     ["ろ","ro",226, 35,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-ku","roku","-く", "ろく", "Six"]
         ]
     ],  
     ["る","ru",191, 44,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["ku-ma","ku-ma","く-ま", "くるま", "Voiture"]
         ]
     ],  
     ["れ","re",77,32,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["wasu-ru","wasureru","わす-る", "わすれる", "Oublier"]
         ]
     ], 
     ["わ","wa",48, 9,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["-tashi ha .... desu.","watashi ha .... desu.","-たしは .... です", "わたしは .... です", "Je m’appelle…"]
         ]
     ],  
     ["を","wo",221, 22,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["- karitai desu ka","wo karitai desu ka","-かりたいですか", "をかりたいですか", "Je voudrais louer..."]
         ]
     ],  
     ["ん","n",89, 17,[
-            ["-rigato","arigato","-りがと", "-りがと"]
+            ["de-sha","densha","で-しゃ", "でんしゃ", "Train"]
         ]
     ]
 ];  

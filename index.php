@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Application fait avec une class JS</h1>
+    <h1>Application pour apprendre l'hiragana (alphabet japonais)</h1>
 
     <section id="translate2">
 

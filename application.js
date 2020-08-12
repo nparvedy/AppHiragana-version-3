@@ -33,7 +33,7 @@ class AppHiragana {
 
         //vérifie si la réponse est correcte
 
-        if(hiraganaVerso[this.valeur][this.change] == wordToGuess2.value && this.buttonSoluceClicked == true){
+        if(hiraganaVerso[this.valeur][this.change] == wordToGuess2.value.toLowerCase() && this.buttonSoluceClicked == true){
             this.answer.innerHTML = "Bonne réponse, la traduction de : " 
             +  hiraganaVerso[this.valeur][this.valeur2] 
             + " était bien " 
@@ -48,7 +48,7 @@ class AppHiragana {
             + " qui veut dire " 
             + " [" + hiraganaVerso[this.valeur][4][0][4] + "]</p>";
             
-        }else if (hiraganaVerso[this.valeur][this.change] == wordToGuess2.value){
+        }else if (hiraganaVerso[this.valeur][this.change] == wordToGuess2.value.toLowerCase()){
             this.answer.innerHTML = "Bonne réponse, la traduction de : " 
             +  hiraganaVerso[this.valeur][this.valeur2] 
             + " était bien " 
@@ -214,3 +214,4 @@ var AppHira = new AppHiragana();
 //propose les 5 premiers hiragana et doit atteindre minimum 3 juste pour passer à l'hiragana suivant
 // faire en sorte que chaque lettre en hiragana il y a sa traduction latin en dessous
 //Chaque lettre hiragana doit répresenter un chiffre, ce qui évite de tout traduire à chaque fois dans le data.js . Exemple : あ = 1 = a 
+//mettre un timer qui au bout de 5 secondes affiche un indice et au bout de 10 secondes, la solution
